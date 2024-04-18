@@ -1,0 +1,28 @@
+# Tasks
+
+Dev kit: Case study - Port the camkes case study application to microkit
+Original estimate - 2 weeks
+16/04/2024
+Found out can't use the camkes code directly as camkes uses templates to generate code. Decided to use the ethernet driver and ip stack in the sddf.
+New task: Port the sddf ethernet driver and ip stack to the dev kit - Estimate 1 week 
+17/04/2024
+Looked through the guide on the sddf Bill sent me and started to look at the sddf code. Found example echo_server which initialises and ip stack and benchmarks ip.
+18/04/2024
+Tried to build the example in the sddf however compiler errors prevented that from completing. Can't use the code directly therefore did not pursue building any further.
+Copied the application to the dev kit area. Should it stay as an application or be made a library? Need a more complex build structure if it stayed an application.
+Need to understand how the case study works to be able to decide if it should be a library or application in itself.
+- The ethernet driver only links with the ip stack therefore does not need to be linked to the case study code 
+- The ip stack links to the transmitter component therefore needs to be linked with the dev kit code 
+  - Need to work out how the transmitter calls into the ip stack - Need to update the code to use the lwip 
+- The camkes applcation use the picserver as a library therefore best to do the same 
+New task: Create an ip stack library in cmake which pulls in all the required files - Estimate 1 day
+New task: Make the new ip library compile and link - 3 days
+New task: Link the ip library with the rest of the dev kit - 1 day 
+
+Need to remake the make file to be compatible with the dev kit 
+
+
+Publish DMA library - Push DMA library adapted from camkes project_libs to repo with instructions on how to use in a project 
+
+Microkit to new platfrom - Found pre-existing microkit porting guide from UNSW. Follow through with Odroid XU4 and prepare user report. Link to this guide within the dev kit
+
