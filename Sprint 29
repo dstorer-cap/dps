@@ -20,6 +20,8 @@ New task: Make the new ip library compile and link - 3 days
 New task: Link the ip library with the rest of the dev kit - 1 day 
 
 Need to remake the make file to be compatible with the dev kit 
+- Might need to make a library file for each part of the case study application - each image is its own protection domain therefore each one needs to be its own library to work with cmake build system.
+- Test with the lwip library first - don't add the exectuables as libraries can add them directly into the top cmake file as images. 
 
 
 Publish DMA library - Push DMA library adapted from camkes project_libs to repo with instructions on how to use in a project 
