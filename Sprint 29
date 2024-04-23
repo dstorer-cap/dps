@@ -23,6 +23,12 @@ Need to remake the make file to be compatible with the dev kit
 - Might need to make a library file for each part of the case study application - each image is its own protection domain therefore each one needs to be its own library to work with cmake build system.
 - Test with the lwip library first - don't add the exectuables as libraries can add them directly into the top cmake file as images. 
 
+23/04/2024
+- Link the virt_rx image in the dev kit 
+- Decide which libraries should become executables (If they are associated with an image file)
+- Ask in the standup about which microkit to use (the one suggested in the sddf is pre-built (can't increase the stack size), should I merge mine with Ivan's?
+- Change the manifest file so I can update and pull in a seperate version of microkit
+
 
 Publish DMA library - Push DMA library adapted from camkes project_libs to repo with instructions on how to use in a project 
 
