@@ -1,3 +1,3 @@
-- Bullet point plan for odroid board port to microkit 
-- Write up readme for the dma library 
-- Send Josh how to build the dev kit in the docker environment
+03/05/2024
+- Look through the ip read me on the sddf to see how to test if it is working 
+- Port the camkes components over to check if they will work with the current build
