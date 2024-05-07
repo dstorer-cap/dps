@@ -1,3 +1,17 @@
 03/05/2024
 - Look through the ip read me on the sddf to see how to test if it is working 
 - Port the camkes components over to check if they will work with the current build
+
+07/05/2024
+- Estimate how long it will take to port the camkes componenets over to the dev kit
+- Work out the connections needed between the protection domains 
+- Port the camkes components over
+
+Notes on camkes code
+- The security demo uses the picoserver component 
+- These are the connections between the picosever and transmitter components 
+        /* PicoServer <-> Transmitter connections */
+        connection seL4PicoServerSignal eth_server_control(from transmitter.eth_control, to picoserver.pico_control);
+        connection seL4PicoServer eth_server_recv(from transmitter.eth_recv, to picoserver.pico_recv);
+        connection seL4PicoServer eth_server_send(from transmitter.eth_send, to picoserver.pico_send);
+
