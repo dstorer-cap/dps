@@ -21,3 +21,7 @@ sddf lwip library description
 - The state struct stores the packets to be sent 
 - When transmitting the head part of the struct is set to the buffer that is to be sent
 
+xhci ethernet example
+- data_packet memory region is used to store the packet to be sent 
+- tcp write is how you send data from the ethernet, it is in the tcp_out.c file of the lwip library
+
