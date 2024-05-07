@@ -14,4 +14,10 @@ Notes on camkes code
         connection seL4PicoServerSignal eth_server_control(from transmitter.eth_control, to picoserver.pico_control);
         connection seL4PicoServer eth_server_recv(from transmitter.eth_recv, to picoserver.pico_recv);
         connection seL4PicoServer eth_server_send(from transmitter.eth_send, to picoserver.pico_send);
+- The case study implements the echo.c file of the picoserver_uboot application in the transmitter.c file 
+- transmit_pending_eth_buffer copies the data to the send buffer then instructs picoserver to transmit the data using the eth_send_send function
+
+sddf lwip library description 
+- The state struct stores the packets to be sent 
+- When transmitting the head part of the struct is set to the buffer that is to be sent
 
