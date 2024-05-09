@@ -30,4 +30,6 @@ Functions in transmitter.c
 - listen_for_socket() listens for an ethernet port and ip address for the data to be sent over. Are there routines in the sddf for this
 - handle_picoserver_notification() sets the socket to send the data packet over when the picosever component notifies that it is ready
 - Try writing to the network queue in the transmitter component either using tcp_write or a function in the queue.h interface
+- Test running the xhci ethernet example - Tested
+- Try to get same output as xhci example when running the dev kit example 
 
