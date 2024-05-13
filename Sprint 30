@@ -35,4 +35,10 @@ Functions in transmitter.c
 13/05/2024
 - The example in the xhci driver also transmit data from a usb keyboard so can use this example 
 - Try to get same output as xhci example when running the dev kit example 
+Porting the example
+- Copy the implementation of the ringbuffer over to the dev kit 
+- Copy the ethernet and ip stack code over to the dev kit 
+- Update the system file to reflect the changes
+- Update the cmake file to reflect the changes 
+
 
