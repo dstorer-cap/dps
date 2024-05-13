@@ -41,4 +41,6 @@ Porting the example
 - Update the system file to reflect the changes
 - Update the cmake file to reflect the changes 
 
+- kmem.h -> don't want netbsd code in the example therefore need to replace this
+
 
