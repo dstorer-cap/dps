@@ -31,5 +31,8 @@ Functions in transmitter.c
 - handle_picoserver_notification() sets the socket to send the data packet over when the picosever component notifies that it is ready
 - Try writing to the network queue in the transmitter component either using tcp_write or a function in the queue.h interface
 - Test running the xhci ethernet example - Tested
+
+13/05/2024
+- The example in the xhci driver also transmit data from a usb keyboard so can use this example 
 - Try to get same output as xhci example when running the dev kit example 
 
