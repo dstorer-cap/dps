@@ -46,5 +46,6 @@ Porting the example
 14/05/2024
 - Run the xhci ethernet example to see when the DHCP ip address is printing 
 - Work out why it is not being printed on the dev kit example 
+- Maybe need to add the ethernet timer in aswell
 
 
