@@ -43,4 +43,8 @@ Porting the example
 
 - kmem.h -> don't want netbsd code in the example therefore need to replace this
 
+14/05/2024
+- Run the xhci ethernet example to see when the DHCP ip address is printing 
+- Work out why it is not being printed on the dev kit example 
+
 
