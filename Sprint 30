@@ -52,4 +52,8 @@ Porting the example
 - Check if the utilisation_socket and udp socket code is the same as the xhci driver code 
 - Work out where the call to netif_status_callback is
 
+17/05/2024
+- Work out where in dhcp_discover in dhcp.c the bug is occuring 
+- Add return statements until I see the error 
+
 
