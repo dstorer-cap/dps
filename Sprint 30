@@ -48,4 +48,8 @@ Porting the example
 - Work out why it is not being printed on the dev kit example 
 - Maybe need to add the ethernet timer in aswell
 
+16/05/2024
+- Check if the utilisation_socket and udp socket code is the same as the xhci driver code 
+- Work out where the call to netif_status_callback is
+
 
