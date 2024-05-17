@@ -56,5 +56,6 @@ Porting the example
 - Work out where in dhcp_discover in dhcp.c the bug is occuring 
 - Add return statements until I see the error 
 - error occurs in  udp_sendto_if_src(dhcp_pcb, p_out, IP_ADDR_BROADCAST, LWIP_IANA_PORT_DHCP_SERVER, netif, IP4_ADDR_ANY); of dhcp_discover
+- erro occurs in err = ip_output_if_src(q, src_ip, dst_ip, ttl, pcb->tos, ip_proto, netif);, line 902 of udp.c
 
 
