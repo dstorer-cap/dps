@@ -1,0 +1,4 @@
+21/05/2024
+- Test running the ethernet example without the uboot driver library initialised 
+- Test sending protected procedures between pd's to see if I can send the result of the keyboard input
+- Test setting up the ringbuffer in the crypto proctection domain
