@@ -3,4 +3,11 @@
 - Test sending protected procedures between pd's to see if I can send the result of the keyboard input
 - Test setting up the ringbuffer in the crypto proctection domain
 
-- Write to a normal buffer
+Plan for case study
+- Send keypresses from keyreader straight to lwip/ethernet to match how the driver is set up already
+- Set up the ringbuffers in keyreader to match the kbdlogger pd in the xhci ethernet example 
+  - There might be a problem with setting up the ringbuffers as it allocates uses kmem
+
+Problems
+- Problem with ethernet driver might be down to differences in ethernet memory region / dma region
+- 
