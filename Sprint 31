@@ -4,7 +4,9 @@
 - Test setting up the ringbuffer in the crypto proctection domain
 
 Plan for case study
-- Send keypresses from keyreader straight to lwip/ethernet to match how the driver is set up already
+- Send keypresses from keyreader straight to lwip using a ppcall to match how the driver is set up already
+- Keypress is handled in function send_keypress in file utlization_socket.c 
+- Need to work out how the kbd_buffer is sent out over the network (not through hardware interrupt)
 - Set up the ringbuffers in keyreader to match the kbdlogger pd in the xhci ethernet example 
   - There might be a problem with setting up the ringbuffers as it allocates uses kmem
 
