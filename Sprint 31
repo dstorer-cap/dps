@@ -12,10 +12,16 @@ Plan for case study
 
 Problems
 - Problem with ethernet driver might be down to differences in ethernet memory region / dma region
+- Remove the ethernet paths and memory mapped region in the uboot driver library set up 
 
 22/05/2024
 - Can't send the keypresses at the same time as they are entered need to store in a buffer
 - Set up two examples one where the keypresses are set up through the protected procedure call and on where the keypresses are written to are shared buffer
+
+Things to test
+- Use the stable version of microkit 
+- Remove ethernet driver paths, mapping and set-up from example 
+- 
 
 Notes
 Each pd has its own virtual memory address space therefore the virtual memory addresses in each pd are specific to each pd
