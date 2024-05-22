@@ -21,7 +21,7 @@ Problems
 Things to test
 - Use the stable version of microkit 
 - Remove ethernet driver paths, mapping and set-up from example 
-- 
+- Remove all unnessecary drivers from the example 
 
 Notes
 Each pd has its own virtual memory address space therefore the virtual memory addresses in each pd are specific to each pd
