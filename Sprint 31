@@ -15,3 +15,8 @@ Problems
 
 22/05/2024
 - Can't send the keypresses at the same time as they are entered need to store in a buffer
+- Set up two examples one where the keypresses are set up through the protected procedure call and on where the keypresses are written to are shared buffer
+
+Notes
+Each pd has its own virtual memory address space therefore the virtual memory addresses in each pd are specific to each pd
+- 
