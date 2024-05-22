@@ -12,4 +12,6 @@ Plan for case study
 
 Problems
 - Problem with ethernet driver might be down to differences in ethernet memory region / dma region
-- 
+
+22/05/2024
+- Can't send the keypresses at the same time as they are entered need to store in a buffer
