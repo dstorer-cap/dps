@@ -31,3 +31,6 @@ Each pd has its own virtual memory address space therefore the virtual memory ad
 - Branch of the current branch to make a branch with no ethernet
 - Ask Tom how to set up the shared buffer without the hacky way
 - Write to the sd card when the user has specified that they are finished
+
+26/05/2024
+- Test sending over two characters
