@@ -34,3 +34,6 @@ Each pd has its own virtual memory address space therefore the virtual memory ad
 
 26/05/2024
 - Test sending over two characters
+
+27/05/2024
+- Checked up to bootloader.md of the dev-kit docs, check the rest tomorrow 
