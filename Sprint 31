@@ -37,3 +37,8 @@ Each pd has its own virtual memory address space therefore the virtual memory ad
 
 27/05/2024
 - Checked up to bootloader.md of the dev-kit docs, check the rest tomorrow 
+
+28/05/2024
+- Run the case_study example on the maaxboard with the good sd card and with keyboard input 
+- Check the rest of the documentation past the bootloader.md file
+- Re-do the diagram which shows the architecture 
