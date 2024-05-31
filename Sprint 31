@@ -42,3 +42,7 @@ Each pd has its own virtual memory address space therefore the virtual memory ad
 - Run the case_study example on the maaxboard with the good sd card and with keyboard input 
 - Check the rest of the documentation past the bootloader.md file
 - Re-do the diagram which shows the architecture 
+
+31/05/2024
+- Try a different function to get keyboard input 
+- 
