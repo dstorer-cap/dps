@@ -1,0 +1,14 @@
+10/06/2024
+- Check new docker environment works with the case study and xhci stack 
+- Read up on the virtualisation (Josh's notes) 
+
+Virtualisation
+- A protection domain for each usb device that is plugged in (no communication between each device)
+- Route each usb device to a virtualised machine, each linux thinks its is running on a physical machine 
+- The usb device driver needs to know which traffic is coming from where and route it to each virtualised machine 
+- Detect what the devices are early on (just get it working for a keyboard and a mouse)
+- The usb driver can see both devices 
+
+Goal
+- Work out which traffic is coming from which device and seperate them out
+- Initialise both devices and seperate them out 
