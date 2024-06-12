@@ -12,3 +12,8 @@ Virtualisation
 Goal
 - Work out which traffic is coming from which device and seperate them out
 - Initialise both devices and seperate them out 
+
+12/06/2024
+- Test the single picolibc on the maaxboard
+- Remove the two instances of dma and test
+
