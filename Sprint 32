@@ -16,4 +16,5 @@ Goal
 12/06/2024
 - Test the single picolibc on the maaxboard
 - Remove the two instances of dma and test
+- Test the new docker environment 
 
