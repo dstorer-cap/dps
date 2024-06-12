@@ -17,4 +17,6 @@ Goal
 - Test the single picolibc on the maaxboard
 - Remove the two instances of dma and test
 - Test the new docker environment 
+  - Can build in the new docker environement with the auts_microkit_stable package
+  - Cannot build with sel4_modern_microkit due to mutliple references of mdelay
 
