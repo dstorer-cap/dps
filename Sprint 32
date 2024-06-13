@@ -20,3 +20,14 @@ Goal
   - Can build in the new docker environement with the auts_microkit_stable package
   - Cannot build with sel4_modern_microkit due to mutliple references of mdelay
 
+13/06/2023
+- Do i need to create the wrapper around linux?
+- The devices will be initialised in the xhci controller 
+- Build and run the xhci driver
+- Work out where the initialisation of each device is happening and seperate out the streams 
+
+Build xhci driver
+- Need main of sel4-xhci
+
+Notes for building xhci_driver
+- Need to initialise the sddf submodule (git submodule update --init --recursive)
