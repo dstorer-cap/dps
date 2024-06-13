@@ -31,3 +31,4 @@ Build xhci driver
 
 Notes for building xhci_driver
 - Need to initialise the sddf submodule (git submodule update --init --recursive)
+- Need to update manifest repository to use main branch of manifest repo
