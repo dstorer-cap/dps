@@ -40,3 +40,7 @@ Initalisation of drivers notes
 Case_study error
 - Look at m_delay name clash between microkit and the uboot driver library 
 - Find the usb class api for the keyboard and the mouse and send over what has happened to the guest (the linux virtual machine)
+
+19/06/2024
+- Make a new branch for the usb routing example
+- Split the xhci example into two protection domains
