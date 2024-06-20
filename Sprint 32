@@ -44,3 +44,9 @@ Case_study error
 19/06/2024
 - Make a new branch for the usb routing example
 - Split the xhci example into two protection domains
+
+20/06/2024
+Qna
+- The xhci driver will show which devices are plugged into the maaxboard 
+- Can you have generic protection domains which will route the devices 
+- Should I catch the devices when they are probed, how to direct that device in a certain direction?
