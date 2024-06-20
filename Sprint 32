@@ -53,3 +53,5 @@ Qna
 - Look for output similar to lsusb command on lithium -> could route the bus and device to a certain protection domain?
 - The arrangement of usb devices can be known in advance so which device is plugged into which port.
 - Look for device no, bus and id when the devices are being probed and put into a static configuration file.
+
+- Send outlook invite to days of for James
