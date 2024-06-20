@@ -50,6 +50,6 @@ Qna
 - The xhci driver will show which devices are plugged into the maaxboard 
 - Can you have generic protection domains which will route the devices 
 - Should I catch the devices when they are probed, how to direct that device in a certain direction?
-- Look for output to lsusb -> could route the bus and device to a certain protection domain?
+- Look for output similar to lsusb command on lithium -> could route the bus and device to a certain protection domain?
 - The arrangement of usb devices can be known in advance so which device is plugged into which port.
 - Look for device no, bus and id when the devices are being probed and put into a static configuration file.
