@@ -55,3 +55,9 @@ Qna
 - Look for device no, bus and id when the devices are being probed and put into a static configuration file.
 
 - Send outlook invite to days of for James
+
+Notes
+- Route devices to virtual machine based on device name e.g "Dell USB Keyboard". Work out what is printed.
+- Device id 3 is the mouse
+- Devicei d 4 is the keyboard
+- struct sel4_usb_device contains information of the usb device 
