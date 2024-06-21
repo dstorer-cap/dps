@@ -58,6 +58,12 @@ Qna
 
 Notes
 - Route devices to virtual machine based on device name e.g "Dell USB Keyboard". Work out what is printed.
+
 - Device id 3 is the mouse
 - Devicei d 4 is the keyboard
 - struct sel4_usb_device contains information of the usb device 
+
+21/06/2024
+- Read around the usb protocol and find out the earliest point in initialisation that traffic could be sent to virtualised linux 
+- Route all the usb stack, usb ip could characterise the traffic 
+- How does the uboot driver initialise 
