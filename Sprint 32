@@ -73,3 +73,4 @@ Notes
 - Use the USB/IP protocol to route traffic from the xhci driver to linux 
 - Can you make the USB/IP memory mapped instead of using IP 
 - Look for an example that uses the USB/IP protocol. usbip.sourceforge.net
+- The original example will show how messages are sent from the server to the client -> need to find where the messages are sent from the xhci stack 
