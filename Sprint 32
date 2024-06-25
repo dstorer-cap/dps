@@ -67,3 +67,9 @@ Notes
 - Read around the usb protocol and find out the earliest point in initialisation that traffic could be sent to virtualised linux 
 - Route all the usb stack, usb ip could characterise the traffic 
 - How does the uboot driver initialise 
+
+25/06/2024
+- USB/IP defined messages to route the USB traffic
+- Use the USB/IP protocol to route traffic from the xhci driver to linux 
+- Can you make the USB/IP memory mapped instead of using IP 
+- Look for an example that uses the USB/IP protocol. usbip.sourceforge.net
