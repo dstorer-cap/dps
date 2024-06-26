@@ -74,3 +74,10 @@ Notes
 - Can you make the USB/IP memory mapped instead of using IP 
 - Look for an example that uses the USB/IP protocol. usbip.sourceforge.net
 - The original example will show how messages are sent from the server to the client -> need to find where the messages are sent from the xhci stack 
+
+26/05/2024
+- The linux kernel contains the usb/ip routing stuff
+- How does the usb/ip work in the linux machine and is this comparable to netbsd
+
+USB/IP notes 
+- The Macros in the KConfig file determine which files get compiled due to the options in the makefile. This is in the linux kernel (https://github.com/torvalds/linux/blob/master/drivers/usb/usbip/Kconfig). The options determine which part of the protocol is built (server, client etc.).
