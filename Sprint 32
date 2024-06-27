@@ -85,3 +85,7 @@ USB/IP notes
 27/05/1998
 - Work out which function sends the message, stub_send_ret_submit
 - Look at the usb/ip protocol as a user 
+- Try to use the USB/IP protocol on lithium
+  - Install USB/IP on lithium as the server
+  - Get the virualised linux running on the maaxboard
+  - Follow the guide to connect up the two machines 
