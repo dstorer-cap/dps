@@ -81,3 +81,7 @@ Notes
 
 USB/IP notes 
 - The Macros in the KConfig file determine which files get compiled due to the options in the makefile. This is in the linux kernel (https://github.com/torvalds/linux/blob/master/drivers/usb/usbip/Kconfig). The options determine which part of the protocol is built (server, client etc.).
+
+27/05/1998
+- Work out which function sends the message, stub_send_ret_submit
+- Look at the usb/ip protocol as a user 
