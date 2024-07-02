@@ -1,0 +1,16 @@
+- Producer(crypto) updates the head, consumer (transmitter) updates the tail
+- Make sure data added by crypto is in the ram, do a cache flush
+- Declare data as volatile 
+
+1. Declare head and tail as volatile
+2. Align the head and tail using __attribute_aligned to 64 bit alignments
+3. Put safety guards around the producer (Crypto)
+  - Cache invalidate before updating the buffer and head
+  - Check that buffer is not full
+  - Memory fence around the operations
+  - Flush after updating the buffer and the head
+4. Put safety guards around the consumer (transmitter)
+  - Cache invalidate before reading the buffer
+  - Check that buffer is not full
+  - Memory fence around the operations
+  - Cache flush after updating the tail
