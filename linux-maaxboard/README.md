@@ -144,8 +144,10 @@ Build Root instance. A sensible starting point is to select the most minimum
 default configuration:
 * Target Options::Target Architecture (AArch64 (little endian))
 * Toolchain::Toolchain type (External toolchain)
+* System configuration::/dev management (Dynamic using devtmpfs + eudev)::Dynamic using devtmpfs + eudev
 * Kernel::Linux Kernel
 * Kernel::Linux Kernel::Kernel configuration (Use the architecture default configuration)
+* Kernel::Linux Kernel Tools::usbip
 * Filesystem images::cpio the root filesystem (for use as an initial RAM filesystem)
 * Filesystem images::cpio the root filesystem::Compression method (gzip)
 
