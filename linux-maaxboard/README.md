@@ -289,9 +289,9 @@ make -C "buildroot-2024.02.1" O="../config" linux-clean
 
 # Run on maaxobard
 ```
-tftpboot 0x40480000 bjeImage
+tftpboot 0x40480000 daniel_linux.img
 tftpboot 0x44000000 bjemaaxboard.dtb
-tftpboot 0x46000000 bjeinitramfs.uImage
+tftpboot 0x46000000 daniel_initramfs.uImage
 booti 0x40480000 0x46000000 0x44000000
 ```
 
