@@ -182,6 +182,14 @@ This shall create:
 Edit ".config" as appropriate. The following changes have been made:
 * Replace every "=m" with "=n", to avoid kernel modules.
 
+Add the following lines to compile usbip modules
+```
+CONFIG_USBIP_CORE=y
+CONFIG_USBIP_VHCI_HCD=y
+CONFIG_USBIP_HOST=y
+CONFIG_USBIP_DEBUG=y
+```
+
 Save as compact default configuration (defconfig):
 ```
 cd tmp
