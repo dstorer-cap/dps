@@ -271,6 +271,11 @@ cp ./tmp/config/images/Image ./src/Image
 cp ./tmp/config/images/rootfs.cpio.gz ./src/rootfs.cpio.gz
 ```
 
+Convert filesystem to uImage
+```
+mkimage -A arm -O linux -T ramdisk -a 0x44000000 -C gzip -n "Build Root File System" -d rootfs.cpio.gz initramfs.uImage
+```
+
 ## Build
 
 For investigation purposes, it can be valuable to locally modify the Linux
