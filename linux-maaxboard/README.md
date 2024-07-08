@@ -286,3 +286,20 @@ make -C "buildroot-2024.02.1" O="../config" linux-build
 make -C "buildroot-2024.02.1" O="../config" linux-rebuild
 make -C "buildroot-2024.02.1" O="../config" linux-clean
 ```
+
+# Settings up usbip
+
+## Set up server (maaxboard)
+Start the deamon
+```
+usbipd
+```
+## Set up client (lithium)
+Load modules
+```
+sudo modprobe usbip-core
+sudo modprobe vhci-hcd
+```
+Query the server
+```
+sudo usbip list -r <server ip>
