@@ -298,9 +298,17 @@ booti 0x40480000 0x46000000 0x44000000
 # Settings up usbip
 
 ## Set up server (maaxboard)
-Start the deamon
+Start the deamon in backgroun
 ```
-usbipd
+usbipd -D
+```
+List the devices that can be shared
+```
+usbip list -l
+```
+Bind the device
+```
+usbip bind -b <bus ID>
 ```
 ## Set up client (lithium)
 Load modules
@@ -311,3 +319,9 @@ sudo modprobe vhci-hcd
 Query the server
 ```
 sudo usbip list -r <server ip>
+```
+Attach device 
+```
+sudo usbip attach -r <server> -b <bus ID>
+```
+
