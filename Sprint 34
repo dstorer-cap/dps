@@ -9,4 +9,7 @@
 
 Add line wiht commit has to vmm_linux and test build
 
+10/07/2024
+- Change the system file to add the memory address for the network device
+- Change the device tree to enable the ethernet device 
 
