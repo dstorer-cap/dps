@@ -271,6 +271,11 @@ cp ./tmp/config/images/Image ./src/Image
 cp ./tmp/config/images/rootfs.cpio.gz ./src/rootfs.cpio.gz
 ```
 
+Convert filesystem to uImage
+```
+mkimage -A arm -O linux -T ramdisk -a 0x44000000 -C gzip -n "Build Root File System" -d rootfs.cpio.gz initramfs.uImage
+```
+
 ## Build
 
 For investigation purposes, it can be valuable to locally modify the Linux
@@ -281,3 +286,42 @@ make -C "buildroot-2024.02.1" O="../config" linux-build
 make -C "buildroot-2024.02.1" O="../config" linux-rebuild
 make -C "buildroot-2024.02.1" O="../config" linux-clean
 ```
+
+# Run on maaxobard
+```
+tftpboot 0x40480000 daniel_linux.img
+tftpboot 0x44000000 bjemaaxboard.dtb
+tftpboot 0x46000000 daniel_initramfs.uImage
+booti 0x40480000 0x46000000 0x44000000
+```
+
+# Settings up usbip
+
+## Set up server (maaxboard)
+Start the deamon in backgroun
+```
+usbipd -D
+```
+List the devices that can be shared
+```
+usbip list -l
+```
+Bind the device
+```
+usbip bind -b <bus ID>
+```
+## Set up client (lithium)
+Load modules
+```
+sudo modprobe usbip-core
+sudo modprobe vhci-hcd
+```
+Query the server
+```
+sudo usbip list -r <server ip>
+```
+Attach device 
+```
+sudo usbip attach -r <server> -b <bus ID>
+```
+

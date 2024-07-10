@@ -1,3 +1,15 @@
 05/07/2024
 - Test the case study example on the main branch with a budget on the transmitter pd so can see if the notification from cytpo comes through
 - BR2_CONFIG_HAS_UDEV = y in the .config file
+
+09/07/2024
+- Virtual guest on the maaxboard to pass through the ip traffic
+- Get the virtual guest up and running on the maaxboard
+- Test out the vmm_linux example
+
+Add line wiht commit has to vmm_linux and test build
+
+10/07/2024
+- Change the system file to add the memory address for the network device
+- Change the device tree to enable the ethernet device 
+
