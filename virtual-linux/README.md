@@ -1,4 +1,5 @@
 # Changes to built version 
+- Added this line to libvmm makefile:  git -C libvmm reset --hard "dcfa24a2e5dbee7e90ab5a0e3a1432813d0e2a5a"
 - Added ethernet memory to vxhci.system protection domain
 - Added config files from native linux to guest dependency
 -  Removed these lines from Makefile in guest
