@@ -22,4 +22,5 @@ Add line wiht commit has to vmm_linux and test build
 - When Bill removes the devices from the linux kernel it fails to unpack the ram filesystem
 - The root filesystem might be too big - send instructions to Build Image and root file system
 - Look at the native version and see where in the set up the traffic is being sent so can look at where to change to memory map -> add logging to native example 
+- log for unpacking filesystem: Unpacking initramfs...
 
