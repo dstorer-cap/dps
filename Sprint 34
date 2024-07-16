@@ -13,3 +13,14 @@ Add line wiht commit has to vmm_linux and test build
 - Change the system file to add the memory address for the network device
 - Change the device tree to enable the ethernet device 
 
+11/07/2024 - QnA
+- Copied the image and file system over and built the guest example -> error with finding libresolv.so.2
+- Rebuilt the guest using the instructions for the native version -> error with finding libresolv.so.2
+- Built using version with no usbip in linux tools -> could load the modules but no usbip deamon 
+- The device tree is different, would this effect it?
+
+- When Bill removes the devices from the linux kernel it fails to unpack the ram filesystem
+- The root filesystem might be too big - send instructions to Build Image and root file system
+- Look at the native version and see where in the set up the traffic is being sent so can look at where to change to memory map -> add logging to native example 
+- log for unpacking filesystem: Unpacking initramfs...
+
