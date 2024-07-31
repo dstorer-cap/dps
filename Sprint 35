@@ -1,0 +1,4 @@
+31/07/2024
+- Add device driver development to the sel4devkit-manual repo
+- Compile the generic bits from each case study for a generic intro
+- Add how to build the camkes and microkit case study to the dev kit repo
