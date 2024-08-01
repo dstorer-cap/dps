@@ -2,3 +2,8 @@
 - Add device driver development to the sel4devkit-manual repo
 - Compile the generic bits from each case study for a generic intro
 - Add how to build the camkes and microkit case study to the dev kit repo
+
+01/08/2024
+- Test uboot driver example and case study in new docker environement 
+- Change the documentation to new docker environement (if works)
+- Modify the summary aswell to include files in webpage
