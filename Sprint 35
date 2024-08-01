@@ -7,3 +7,9 @@
 - Test uboot driver example and case study in new docker environement 
 - Change the documentation to new docker environement (if works)
 - Modify the summary aswell to include files in webpage
+Meeting with Bill
+- Need to pull in sel4devkit-maaxboard-microkit into dev kit areas
+- Transfer the the devlopment environement setup sections and first boot sections into the sel4devkitmanual
+- Install and configure is getting the development environement ready (getting to the uboot prompt)
+- First boot is building and running sel4 programs 
+- 5.1 bootloader shows that you can get into uboot 
