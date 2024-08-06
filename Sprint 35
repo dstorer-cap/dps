@@ -20,3 +20,7 @@ Meeting with Bill
 - Add the repository to the manifest 
 - Test building the camkes and microkit case study applications in the new docker environments (need to make in the microkit docker environment, microkit is in the out folder)
 - Merge the case study branch into main
+
+07/08/2024
+- Add explanation of architecture diagram back into microkit case study build
+- Move the case study files (keyreader, transmitter...) into the examples repository
