@@ -25,3 +25,4 @@ Meeting with Bill
 - Add explanation of architecture diagram back into microkit case study build
 - Move the case study files (keyreader, transmitter...) into the examples repository
 - Change the heading for the microkit and camkes case studies in the manual to just headings
+- Add libmicrokitdma repostiory to the sel4devkit organisation 
