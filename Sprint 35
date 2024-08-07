@@ -26,3 +26,6 @@ Meeting with Bill
 - Move the case study files (keyreader, transmitter...) into the examples repository
 - Change the heading for the microkit and camkes case studies in the manual to just headings
 - Add libmicrokitdma repostiory to the sel4devkit organisation 
+
+Updates
+- Change the directory structure to platform_libs instead of microkit 
