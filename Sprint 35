@@ -29,3 +29,7 @@ Meeting with Bill
 
 Updates
 - Change the directory structure to platform_libs instead of microkit 
+
+08/08/2024
+- Move libmicrokitdma to sel4devkit organisation
+- Transfer the the devlopment environement setup sections and first boot sections into the sel4devkitmanual
