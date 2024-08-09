@@ -33,3 +33,9 @@ Updates
 08/08/2024
 - Move libmicrokitdma to sel4devkit organisation
 - Transfer the the devlopment environement setup sections and first boot sections into the sel4devkitmanual
+
+09/08/2024
+- Test the new build of the xhci driver -> need to rebuild when building a new example 
+- Test the native performance of the xhci driver against the native performance  -> against native linux 
+- Test mass storage performance (write a file of GB)
+- If performance is not good give guidance to improving the performance 
