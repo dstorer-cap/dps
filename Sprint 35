@@ -39,3 +39,6 @@ Updates
 - Test the native performance of the xhci driver against the native performance  -> against native linux 
 - Test mass storage performance (write a file of GB)
 - If performance is not good give guidance to improving the performance 
+
+Things to ask when bill is back
+- Need to install yaml in the python area of the docker environemtents
