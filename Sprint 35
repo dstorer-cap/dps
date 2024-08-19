@@ -54,3 +54,9 @@ Bill Update
 
 Things to ask Bill
 - Ended up with two picolibc's and two uboots
+
+19/08/2024
+- Use 1.4.1 microkit with the dev kit 
+- Test xhci driver against native linux 
+- Update the builing uboot manually section of the documentation
+
