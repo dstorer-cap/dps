@@ -41,4 +41,16 @@ Updates
 - If performance is not good give guidance to improving the performance 
 
 Things to ask when bill is back
-- Need to install yaml in the python area of the docker environemtents
+- 
+
+Bill Update
+- Updated the makefile for microkit_1.4.0 however does not work with the dev kit code
+- Updated the docker environment to include ssh keys
+- Moved the repositories into the the dev kit area
+- Added the install and configure section to the manual, tried to remove all appendices however there are still some in there 
+- Added the first boot section to the manual
+- Added development section to the manual
+- Added paragraphs on sel4 microkernel and avnet maaxboard
+
+Things to ask Bill
+- Ended up with two picolibc's and two uboots
