@@ -1,0 +1,62 @@
+31/07/2024
+- Add device driver development to the sel4devkit-manual repo
+- Compile the generic bits from each case study for a generic intro
+- Add how to build the camkes and microkit case study to the dev kit repo
+
+01/08/2024
+- Test uboot driver example and case study in new docker environement 
+- Change the documentation to new docker environement (if works)
+- Modify the summary aswell to include files in webpage
+Meeting with Bill
+- Need to pull in sel4devkit-maaxboard-microkit into dev kit areas
+- Transfer the the devlopment environement setup sections and first boot sections into the sel4devkitmanual
+- Install and configure is getting the development environement ready (getting to the uboot prompt)
+- First boot is building and running sel4 programs 
+- 5.1 bootloader shows that you can get into uboot 
+
+06/08/2024
+- Add microkit repo's to the dev kit repository
+- Figure out where in microkit dev-kit to put microkit 
+- Add the repository to the manifest 
+- Test building the camkes and microkit case study applications in the new docker environments (need to make in the microkit docker environment, microkit is in the out folder)
+- Merge the case study branch into main
+
+07/08/2024
+- Add explanation of architecture diagram back into microkit case study build
+- Move the case study files (keyreader, transmitter...) into the examples repository
+- Change the heading for the microkit and camkes case studies in the manual to just headings
+- Add libmicrokitdma repostiory to the sel4devkit organisation 
+
+Updates
+- Change the directory structure to platform_libs instead of microkit 
+
+08/08/2024
+- Move libmicrokitdma to sel4devkit organisation
+- Transfer the the devlopment environement setup sections and first boot sections into the sel4devkitmanual
+
+09/08/2024
+- Test the new build of the xhci driver -> need to rebuild when building a new example 
+- Test the native performance of the xhci driver against the native performance  -> against native linux 
+- Test mass storage performance (write a file of GB)
+- If performance is not good give guidance to improving the performance 
+
+Things to ask when bill is back
+- 
+
+Bill Update
+- Updated the makefile for microkit_1.4.0 however does not work with the dev kit code
+- Updated the docker environment to include ssh keys
+- Moved the repositories into the the dev kit area
+- Added the install and configure section to the manual, tried to remove all appendices however there are still some in there 
+- Added the first boot section to the manual
+- Added development section to the manual
+- Added paragraphs on sel4 microkernel and avnet maaxboard
+
+Things to ask Bill
+- Ended up with two picolibc's and two uboots
+
+19/08/2024
+- Use 1.4.1 microkit with the dev kit 
+- Test xhci driver against native linux 
+- Update the builing uboot manually section of the documentation
+

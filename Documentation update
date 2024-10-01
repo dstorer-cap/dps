@@ -1,0 +1,12 @@
+- Add section called activities to the dev kit documentation:
+	- Add section about Uboot drivers on the camkes framework -> original camkes dev kit (device driver development)
+	- Add section on migrating the device driver framework (uboot drivers) to microkit
+    - Adding picolibc
+    - Updating uboot to work with picolibc
+    - Adding code for adding the device tree
+    - Updating the wrapper code to work with uboot
+    - Adding dma microkit library 
+  - Add section about the camkes case study
+  - Add section on updating the camkes case study to microkit 
+    - Talk about problems with using the ethernet driver
+    - Talk about how there is no locking library so needed to have a work around for that 
