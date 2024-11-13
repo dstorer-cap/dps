@@ -1,3 +1,9 @@
+# Linux guest images
+
+- Built with opensc and ccid packages installed
+
+- Output stored in /home/dstorer/maaxboard-linux/nitrokey/tmp/config/images
+
 
 # Using opensc to generate random entropy
 - Start the pcscd service (PC/SC daemon) (which interfaces with smart card readers).
@@ -6,7 +12,7 @@ sudo systemctl restart pcscd
 ```
 Generate entropy using the pkcs11-tool 
 ```
-pkcs11-tool --module /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so --generate-random 32 --output random_data.bin
+pkcs11-tool --slot 2 --module /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so --generate-random 32 --output random_data.bin
 ```
 
 ## Explantion of tool
@@ -74,7 +80,7 @@ Finally, C_Finalize is called to clean up and release any resources allocated by
 opensc
 
 ### Linux guest build
-- Change the values so the initram is big enough 
+- Change the values so the initram is big enough (0x45000000 is the address that works for the opensc and ccid linux guest)
 
 - Start the pcsc deamon
 ```
@@ -83,6 +89,22 @@ pcscd
 
 - Command to generate entropy on maaxboard
 ```
-pkcs11-tool --module /usr/lib/opensc-pkcs11.so --generate-random 32 --output random_data.bin
+pkcs11-tool --slot 1 --module /usr/lib/opensc-pkcs11.so --generate-random 32 --output random_data.bin
 ```
 
+- Check the device tree physical addresses in the system file
+- Add usb irq interrupt into system file (32 + interrupt from device tree)
+- View output of log on native to see what happens with usb device initialisation 
+
+11-11-2024
+- Change dtx hours to apricot code
+- See how the opensc tool indexes the nitrokeys 
+- Strip out tooling code into wrapper code 
+
+13-11-2024
+- Find the device that is causing the spurious interrupts and remove the passthrough
+- Follow toms instructions for virtio
+
+Wrapper program for opensc tool
+- User level program which gets to output file from the opensc tool and writes it to a memory region
+- Need to use the UIO stuff (Tom) to define a memory region in the linux guest where the program can write to
