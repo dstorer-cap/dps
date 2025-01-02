@@ -15,6 +15,22 @@ Generate entropy using the pkcs11-tool
 pkcs11-tool --slot 2 --module /usr/lib/x86_64-linux-gnu/opensc-pkcs11.so --generate-random 32 --output random_data.bin
 ```
 
+## Kill pcscd thread
+
+Find the Process ID (PID): Run the following command to find the PID of pcscd:
+
+bash
+Copy code
+ps aux | grep pcscd
+This will list all processes with pcscd in their name. Note the PID (first number) of the process.
+
+Kill the Process: Use the kill command with the PID to terminate it:
+
+bash
+Copy code
+sudo kill -9 <PID>
+Replace <PID> with the actual PID you found in the previous step.
+
 ## Explantion of tool
 
 ### Device detection by OpenSC
@@ -30,12 +46,6 @@ The generated data is then returned via the OpenSC module to pkcs11-tool, which 
 ```
 pkcs11-tool --list-slots
 ```
-
-## To do 
-Make notes on the debian tools to see how the pcks11 tool uses the .so module to generate the random data.
-- Will be using the .so module as it is -> need to know how the tool calls into it
-- Look through the opensc code to determine how it generates random data and interfaces with the ntirokey
-- Generate random function generates the random data
 
 ## Notes on pkcs11-tool.c 
 - The generate_random function creates random data
@@ -67,11 +77,6 @@ After the random data is retrieved, pkcs11-tool closes the session with C_CloseS
 
 Finally, C_Finalize is called to clean up and release any resources allocated by the PKCS#11 module during the process.
 
-### To do
-- Look at the build root documentation to determine how to add custom code to the build 
-- Test building buildroot with the opensc module installed 
-- Tom did it by unpacking the filesystem and adding his code and repacking the filesystem 
-
 ### Building buildroot with opensc 
 - Opensc library enabled in: Target packages -> Libraries -> Hardware handling -> opensc
 - ccid library enabled in: Target packages -> Libraries -> Hardware handling -> ccid
@@ -92,19 +97,64 @@ pcscd
 pkcs11-tool --slot 1 --module /usr/lib/opensc-pkcs11.so --generate-random 32 --output random_data.bin
 ```
 
-- Check the device tree physical addresses in the system file
-- Add usb irq interrupt into system file (32 + interrupt from device tree)
-- View output of log on native to see what happens with usb device initialisation 
-
-11-11-2024
-- Change dtx hours to apricot code
-- See how the opensc tool indexes the nitrokeys 
-- Strip out tooling code into wrapper code 
-
-13-11-2024
-- Find the device that is causing the spurious interrupts and remove the passthrough
-- Follow toms instructions for virtio
-
 Wrapper program for opensc tool
 - User level program which gets to output file from the opensc tool and writes it to a memory region
 - Need to use the UIO stuff (Tom) to define a memory region in the linux guest where the program can write to
+
+### Indexing smartcards
+```
+pkcs11-tool --list-slots
+```
+Output:
+Available slots:                                                                                                                                                                                                         14:27:41 [155/19911]
+Slot 0 (0x0): Nitrokey Nitrokey Start (FSIJ-1.2.19-A42D8256) 00 00
+  token label        : OpenPGP card (User PIN)
+  token manufacturer : OpenPGP project
+  token model        : PKCS#15 emulated
+  token flags        : login required, rng, token initialized, PIN initialized
+  hardware version   : 2.0
+  firmware version   : 2.0
+  serial num         : fffea42d8256
+  pin min/max        : 6/127
+Slot 1 (0x1): Nitrokey Nitrokey Start (FSIJ-1.2.19-A42D8256) 00 00
+  token label        : OpenPGP card (User PIN (sig))
+  token manufacturer : OpenPGP project
+  token model        : PKCS#15 emulated
+  token flags        : login required, rng, token initialized, PIN initialized
+  hardware version   : 2.0
+  firmware version   : 2.0
+  serial num         : fffea42d8256
+  pin min/max        : 6/127
+Slot 2 (0x4): Nitrokey Nitrokey Start (FSIJ-1.2.19-7AF10C50) 01 00
+  token label        : OpenPGP card (User PIN)
+  token manufacturer : OpenPGP project
+  token model        : PKCS#15 emulated
+  token flags        : login required, rng, token initialized, PIN initialized
+  hardware version   : 2.0
+  firmware version   : 2.0
+  serial num         : fffe7af10c50
+  pin min/max        : 6/127
+Slot 3 (0x5): Nitrokey Nitrokey Start (FSIJ-1.2.19-7AF10C50) 01 00
+  token label        : OpenPGP card (User PIN (sig))
+  token manufacturer : OpenPGP project
+  token model        : PKCS#15 emulated
+  token flags        : login required, rng, token initialized, PIN initialized
+  hardware version   : 2.0
+  firmware version   : 2.0
+  serial num         : fffe7af10c50
+  pin min/max        : 6/127
+```
+
+- Use hex value to index slot not number after slot
+
+To do 
+- Write number of bytes to a memory region so can be used in health tests
+- Check health tests with more bytes of data
+
+
+entropy=$(pkcs11-tool --module /usr/lib/opensc-pkcs11.so --generate-random 32 | xxd -p | tr -d '\n')
+echo "Generated Entropy: $entropy"
+
+- Try and compile with none-elf compiler 
+- Remove libraries that I don't need
+- Maybe look for the specific routines in the libraries 
