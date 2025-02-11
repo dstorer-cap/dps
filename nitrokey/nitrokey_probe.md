@@ -54,7 +54,7 @@ Signature key ....: [none]
 Encryption key....: [none]
 Authentication key: [none]
 General key info..: [none]
-<pre/>
+</pre>
 
 - Reset card back to factory settings
 
