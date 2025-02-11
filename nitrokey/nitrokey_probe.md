@@ -76,9 +76,9 @@ gpg --card-status
 
 - Confirm the change to identity by locating the 10th byte of the application ID, it should be 01:
 
-```
+<pre>
 Reader ...........: Nitrokey Nitrokey Start (FSIJ-1.2.19-7AF10C50) 00 00
-Application ID ...: D276000124010200FF**01**7AF10C500000
+Application ID ...: D276000124010200FF<b>01</b>7AF10C500000
 Application type .: OpenPGP
 Version ..........: 2.0
 Manufacturer .....: unmanaged S/N range
@@ -98,8 +98,7 @@ Signature key ....: [none]
 Encryption key....: [none]
 Authentication key: [none]
 General key info..: [none]
-
-```
+</pre>
 
 - Reset card back to factory settings
 
@@ -120,9 +119,9 @@ gpg --card-status
 ```
 
 - Confirm the change to identity by locating the 10th byte of the application ID, it should be 02:
-```
+<pre>
 Reader ...........: Nitrokey Nitrokey Start (FSIJ-1.2.19-7AF10C50) 00 00
-Application ID ...: D276000124010200FF**02**7AF10C500000
+Application ID ...: D276000124010200FF<b>02</b>7AF10C500000
 Application type .: OpenPGP
 Version ..........: 2.0
 Manufacturer .....: unmanaged S/N range
@@ -142,7 +141,7 @@ Signature key ....: [none]
 Encryption key....: [none]
 Authentication key: [none]
 General key info..: [none]
-```
+</pre>
 
 - Reset card back to factory settings
 
