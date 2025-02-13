@@ -274,7 +274,7 @@ make -C "buildroot-2024.02.1" O="../config" linux-rebuild
 make -C "buildroot-2024.02.1" O="../config" linux-clean
 ```
 
-# Run on maaxobard
+# Run on maaxboard
 ```
 tftpboot 0x40480000 daniel_linux.img
 tftpboot 0x44000000 bjemaaxboard.dtb
