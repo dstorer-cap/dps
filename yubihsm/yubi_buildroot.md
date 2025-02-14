@@ -79,10 +79,10 @@ Kernel::Linux Kernel::Kernel configuration (Use the architecture default configu
 Target Packages::Libraries::Crypto::openssl support
 Target Packages::Libraries::Networking::libcurl
 Target Packages::Libraries::Text and terminal handling::libedit
-Target Packages::Libraries::Hardware Handling::libusb
-Target Packages::Libraries::Hardware Handling::pcsc-lite
-Target Packages::Libraries::Hardware Handling::opensc
 Target Packages::Libraries::Hardware Handling::ccid
+Target Packages::Libraries::Hardware Handling::libusb
+Target Packages::Libraries::Hardware Handling::opensc
+Target Packages::Libraries::Hardware Handling::pcsc-lite
 Target Packages::Hardware Handling::yubihsm
 Filesystem images::cpio the root filesystem (for use as an initial RAM filesystem)
 Filesystem images::cpio the root filesystem::Compression method (gzip)
