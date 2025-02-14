@@ -4,19 +4,6 @@ Realising, this is becoming a serviceable contribution in its own right.
 Frame this as an local example, for now, but there is room for beginning the
 packaging of these.
 
-# And once built...
-
-in "blt":
-```
-mkimage -A arm -O linux -T ramdisk -a 0x44000000 -C gzip -n "Build Root File System" -d rootfs.cpio.gz GUEST.initramfs.uImage
-cp Image GUEST.linux
-
-tftpboot 0x40480000 GUEST.linux
-tftpboot 0x44000000 maaxboard.dtb
-tftpboot 0x46000000 GUEST.initramfs.uImage
-booti 0x40480000 0x46000000 0x44000000
-```
-
 # Build Root
 
 It is appropriate to use Build Root, to establish a specific configuration,
@@ -287,7 +274,7 @@ make -C "buildroot-2024.02.1" O="../config" linux-rebuild
 make -C "buildroot-2024.02.1" O="../config" linux-clean
 ```
 
-# Run on maaxobard
+# Run on maaxboard
 ```
 tftpboot 0x40480000 daniel_linux.img
 tftpboot 0x44000000 bjemaaxboard.dtb
