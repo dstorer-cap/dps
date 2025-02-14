@@ -68,6 +68,7 @@ make -C ./buildroot-2024.02.1 O="${PWD}/config" menuconfig
 '''
 Note that Build Root creates content in "config", including a Makefile. Be aware that, somewhat annoyingly, this Makefile is hard coded to this specific Build Root instance. A sensible starting point is to select the most minimum default configuration:
 
+```
 Target Options::Target Architecture (AArch64 (little endian))
 Target Architecture Variant (cortex-A3)
 Toolchain::Toolchain type (External toolchain)
@@ -85,7 +86,8 @@ Target Packages::Libraries::Hardware Handling::ccid
 Target Packages::Hardware Handling::yubihsm
 Filesystem images::cpio the root filesystem (for use as an initial RAM filesystem)
 Filesystem images::cpio the root filesystem::Compression method (gzip)
-'''
+```
+
 - Build
 ```
 make -C ./buildroot-2024.02.1 O="${PWD}/config"
